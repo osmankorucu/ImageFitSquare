@@ -1,11 +1,16 @@
 from PIL import Image
 import sys
+from pathlib import Path
 if len(sys.argv) < 2:
     print("Lutfen parametre olarak resim veriniz")
 else:
+    file_path = "r'"
+    file_path = file_path.join(sys.argv[1:])
+    file_path = str.strip(file_path)
+    paths = Path(file_path).glob('**/*')
     i=0
-    for im in sys.argv[1:]:
-        #print(im+"\n")
+    for im in paths:
+        print(im)
         image = Image.open(im)
         #print(im+"/n")
         min_size=1000
