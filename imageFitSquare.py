@@ -4,7 +4,7 @@ from pathlib import Path
 if len(sys.argv) < 2:
     print("Lutfen parametre olarak resim veriniz")
 else:
-    file_path = "r'"
+    file_path = " "
     file_path = file_path.join(sys.argv[1:])
     file_path = str.strip(file_path)
     paths = Path(file_path).glob('**/*')
